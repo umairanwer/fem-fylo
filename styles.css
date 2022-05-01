@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --pale-blue: hsl(243, 100%, 93%);
+    --gr-blue: hsl(229, 7%, 55%);
+    --dark-blue: hsl(228, 56%, 26%);
+    --v-dark-blue:hsl(229, 57%, 11%);
+}
+
+body{
+    background-image: url("images/bg-mobile.png");
+    font-size: 10px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.main-container{
+    display: flex;
+    width: 100%;
+    height: 90vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-container{
+    background-color: var(--dark-blue);
+    width: 35em;
+    height: 20em;
+    border-radius: 1em 10em 1em 1em;
+    padding-top: 2em;
+    padding-left: 4em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.info-container{
+    background-color: var(--dark-blue);
+    width: 35em;
+    height: 20em;
+    border-radius: 1em;
+    margin-top: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 4em;
+}
+
+.logo-name{
+    display: block;
+    align-self: flex-start;
+    margin-top: 2em;
+}
+.action-container{
+    display: grid;
+    width: 70%;
+    grid-template-columns: 5em 5em 5em;
+    column-gap: 1.5em;
+    margin-bottom: 3.5em;
+}
+
+.icon-frame{
+    background-color: aliceblue;
+    width: 5em;
+    height: 5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1em;
+    background-color: var(--v-dark-blue);
+}
+.action-image{
+    align-self: center;
+}
+
+.usage-sentence{
+    color: var(--pale-blue);
+    font-size: 1.5em;
+    margin-bottom: 1.5em;
+}
+
+
+.progress-bar-container{
+    margin: 0 auto;
+    height: 2em;
+    background-color: var(--v-dark-blue);
+    width: 30em;
+    border-radius: 1em;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1em;
+}
+.progress-bar{
+    border-radius: 1em;
+    margin-left: 0.3em;
+    height: 80%;
+    width: 70%;
+    background-image: linear-gradient(to right,hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+    display: flex;
+    align-items: center;   
+}
+.end-circle{
+   height: 80%;
+   width: 1.4em;
+   background-color: var(--pale-blue);
+   margin-left: auto;
+   margin-right: 0.2em;
+   border-radius: 2em;
+}
+
+.progress-labels{
+    display: flex;
+    justify-content: space-between;
+}
+
+.gb-label{
+    color: var(--pale-blue);
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.highlight-progress{
+    position: relative;
+    margin: 0 auto;
+    top: 2.5em;
+    width: 20em;
+    background-color: white;
+    text-align: center;
+    padding: 2em;
+    border-radius: 1em;
+}
+
+.gb-left{
+    color: var(--gr-blue);
+    font-size: 1.5em;
+    font-weight: bold
+}
+
+.gb-left strong{
+    font-size: 3em;
+    color: black;
+}
+
+.attribution{
+    position: absolute;
+    color: var(--pale-blue);
+    bottom: 1em;
+    margin: 0 auto;
+}
+
+.attribution p{
+margin: 0 auto;
+}
+
+@media only screen and (min-width: 376px){
+    body{
+        background-color: var(--v-dark-blue);
+        background-image: url("images/bg-desktop.png");
+        background-repeat: no-repeat;
+        background-position: left bottom;
+        background-size: contain;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+    }
+    .main-container{
+        height: fit-content;
+        flex-direction: row;
+        align-items: flex-end;
+    }
+    .logo-container{
+        margin-right: 3em;
+    }
+    .info-container{
+        position: relative;
+        margin-top: 0;
+        width: 52.5em;
+        height: 15em;
+        align-items: flex-start;
+        padding-left: 5em;
+    }
+    .highlight-progress{
+        position: absolute;
+        padding-top: 1em;
+        top: -3.5em;
+        right: 5em;
+        height: 7em;
+        width: 18em;
+        background-color: white;
+    }
+    .progress-bar-container{
+        width: 42.5em;
+    }
+    .arrow{
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0em 3em 3em 0em;
+        border-color: transparent white transparent transparent;
+        right: 0em;
+    }
+}
