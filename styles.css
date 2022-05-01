@@ -15,6 +15,7 @@
 
 body{
     background-image: url("images/bg-mobile.png");
+
     font-size: 10px;
     font-family: 'Raleway', sans-serif;
 }
@@ -150,6 +151,7 @@ body{
 
 .attribution{
     position: absolute;
+    width: 100vw;
     color: var(--pale-blue);
     bottom: 1em;
     margin: 0 auto;
@@ -158,7 +160,9 @@ body{
 .attribution p{
 margin: 0 auto;
 }
-
+.attribution a:link{
+    color: var(--pale-blue);
+}
 @media only screen and (min-width: 1400px){
     body{
         background-color: var(--v-dark-blue);
